@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ConsumingAnApi</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <div>
+      <ul>
+        <%= form_tag :search, method: :get do %>
+          <div>
+            <%= text_field_tag :search, "Search by zip...", class: "form-control" %>
+            <%= submit_tag "Locate", class: "btn btn-primary" %>
+          </div>
+        <% end %>
+      </ul>
+    </div>
+
+    <%= yield %>
+  </body>
+</html>

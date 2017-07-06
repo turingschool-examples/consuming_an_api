@@ -1,0 +1,9 @@
+<% @stations.each do |station| %>
+  <ul class="station">
+    <li class="station_name"><%= station.name %></li>
+    <li class="station_address"><%= station.address %></li>
+    <li class="station_fuel_type"><%= station.fuel_type %></li>
+    <li class="station_distance"><%= station.distance %></li>
+    <li class="station_access_times"><%= station.access_times %></li>
+  </ul>
+<% end %>
